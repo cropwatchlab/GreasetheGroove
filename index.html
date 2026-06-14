@@ -8,6 +8,8 @@
 <meta name="apple-mobile-web-app-title" content="Grease the Groove">
 <meta name="theme-color" content="#eef0f4">
 <title>Grease the Groove</title>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-192.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -264,6 +266,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
   display:flex;align-items:center;justify-content:center;line-height:1;
   -webkit-tap-highlight-color:transparent}
 .lb-body{padding:16px}
+/* ── 8-Week Program tab ── */
+.plan-wrap{padding:18px 16px 0}
+.plan-h{display:flex;align-items:center;justify-content:space-between;margin:6px 2px 16px}
+.plan-h h2{font-size:22px;font-weight:800;color:var(--txt);letter-spacing:-.3px}
+.plan-gear{width:38px;height:38px;border-radius:12px;background:var(--surf);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;color:var(--mut)}
+.dc{background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:var(--sh);padding:18px;margin-bottom:14px}
+.dc-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px}
+.dc-day{font-size:15px;color:var(--mut);font-weight:600}
+.dc-day b{font-size:30px;color:var(--txt);font-weight:800;letter-spacing:-1px}
+.dc-rem{font-size:13px;color:var(--mut)}
+.dc-bar{height:8px;background:var(--surf2);border-radius:8px;overflow:hidden}
+.dc-bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),#fbbf24);border-radius:8px;transition:width .5s}
+.ck-hd{display:flex;align-items:center;justify-content:space-between;margin:4px 4px 10px}
+.ck-hd .t{font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--mut)}
+.ck-hd .c{font-size:13px;font-weight:700;color:var(--acc)}
+.ck{display:flex;align-items:center;gap:13px;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--rsm);box-shadow:var(--sh);padding:14px 15px;margin-bottom:8px}
+.ck .box{width:26px;height:26px;border-radius:8px;border:2px solid var(--bdr);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.15s}
+.ck.on .box{background:var(--acc);border-color:var(--acc)}
+.ck.on .box::after{content:"";width:7px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translateY(-1px)}
+.ck .nm{flex:1;font-size:14.5px;color:var(--txt);font-weight:500}
+.ck.on .nm{color:var(--mut)}
+.fw{display:flex;gap:12px;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--rsm);box-shadow:var(--sh);padding:13px 15px;margin-bottom:8px;align-items:flex-start}
+.fw .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);margin-top:7px;flex-shrink:0}
+.fw .tx{flex:1;font-size:14.5px;color:var(--txt);line-height:1.45}
+.plan-acts{display:flex;gap:10px;margin:16px 0 8px}
+.plan-acts button{flex:1;background:var(--surf);border:1px solid var(--bdr);box-shadow:var(--sh);border-radius:var(--rsm);padding:14px;font-size:14px;font-weight:700;color:var(--txt)}
+.plan-note{font-size:12.5px;color:var(--mut);line-height:1.5;padding:0 4px;margin:6px 0 4px}
+.lb-field{margin-bottom:13px}
+.lb-field label{display:block;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--mut);margin-bottom:6px}
+.lb-field input,.lb-field select{width:100%;background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--rsm);padding:12px 13px;font-size:16px;color:var(--txt);font-family:inherit}
+.lb-field input:focus,.lb-field select:focus{outline:none;border-color:var(--acc)}
+.lb-btn{display:block;width:100%;text-align:center;background:var(--acc);color:#fff;font-weight:700;border-radius:var(--rsm);padding:13px;font-size:15px;margin-top:6px;border:none;cursor:pointer}
+.lb-btn.sec{background:var(--surf2);color:var(--txt);border:1px solid var(--bdr)}
+.lb-btn.danger{background:transparent;color:#dc2626;border:1px solid rgba(220,38,38,.3)}
+.lb-row{display:flex;align-items:center;gap:10px;background:var(--surf2);border-radius:var(--rsm);padding:11px 13px;margin-bottom:7px}
+.lb-row .x{flex:1;font-size:14px;color:var(--txt)}
+.lb-row button{color:#dc2626;font-size:13px;font-weight:600;background:none;border:none;cursor:pointer}
+.wk-pts{font-size:13px;color:var(--mut);margin-top:10px;font-variant-numeric:tabular-nums}
+.wtrend{width:100%;height:120px;margin:8px 0}.wtrend svg{width:100%;height:100%}
+.act-it{display:flex;align-items:center;gap:11px;background:var(--surf2);border-radius:var(--rsm);padding:11px 13px;margin-bottom:7px}
+.act-it .ai{flex:1}.act-it .ai .t{font-size:14px;font-weight:600;color:var(--txt)}.act-it .ai .d{font-size:12px;color:var(--mut)}
+.act-it button{color:#dc2626;font-size:18px;background:none;border:none;cursor:pointer}
 
 /* ── CELEBRATION ── */
 #celeb{position:fixed;inset:0;pointer-events:none;z-index:999;
@@ -311,6 +355,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
     <button class="nb" id="nb-st" onclick="nav('stats')">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="5" height="9" rx="1.5"/><rect x="9.5" y="7" width="5" height="14" rx="1.5"/><rect x="16" y="3" width="5" height="18" rx="1.5"/></svg>
       Stats
+    </button>
+    <button class="nb" id="nb-pl" onclick="nav('plan')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10h7M8.5 14h7M8.5 18h4"/></svg>
+      Plan
     </button>
     <button class="nb" id="nb-se" onclick="nav('settings')">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/><circle cx="7" cy="6" r="2.5" fill="currentColor"/><circle cx="16" cy="12" r="2.5" fill="currentColor"/><circle cx="11" cy="18" r="2.5" fill="currentColor"/></svg>
@@ -369,6 +417,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
     <button class="nb on" id="nb-st2" onclick="nav('stats')">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="5" height="9" rx="1.5"/><rect x="9.5" y="7" width="5" height="14" rx="1.5"/><rect x="16" y="3" width="5" height="18" rx="1.5"/></svg>
       Stats
+    </button>
+    <button class="nb" id="nb-pl2" onclick="nav('plan')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10h7M8.5 14h7M8.5 18h4"/></svg>
+      Plan
     </button>
     <button class="nb" id="nb-se2" onclick="nav('settings')">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/><circle cx="7" cy="6" r="2.5" fill="currentColor"/><circle cx="16" cy="12" r="2.5" fill="currentColor"/><circle cx="11" cy="18" r="2.5" fill="currentColor"/></svg>
@@ -438,10 +490,53 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="5" height="9" rx="1.5"/><rect x="9.5" y="7" width="5" height="14" rx="1.5"/><rect x="16" y="3" width="5" height="18" rx="1.5"/></svg>
       Stats
     </button>
+    <button class="nb" id="nb-pl3" onclick="nav('plan')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10h7M8.5 14h7M8.5 18h4"/></svg>
+      Plan
+    </button>
     <button class="nb on" id="nb-se3" onclick="nav('settings')">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/><circle cx="7" cy="6" r="2.5" fill="currentColor"/><circle cx="16" cy="12" r="2.5" fill="currentColor"/><circle cx="11" cy="18" r="2.5" fill="currentColor"/></svg>
       Manage
     </button>
+  </div>
+</div>
+
+<!-- 8-WEEK FRAMEWORK -->
+<div class="pg" id="pg-plan">
+  <div class="plan-wrap">
+    <div class="plan-h">
+      <h2>Daily Framework</h2>
+      <button class="plan-gear" onclick="openPlanSettings()" aria-label="Edit framework">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 008 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H2a2 2 0 110-4h.09A1.65 1.65 0 003.6 8a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H8a1.65 1.65 0 001-1.51V2a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V8a1.65 1.65 0 001.51 1H22a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      </button>
+    </div>
+    <div id="plan-body"></div>
+  </div>
+  <div class="nav-sp"></div>
+  <div class="nav">
+    <button class="nb" id="nb-h4" onclick="nav('home')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V21a1 1 0 01-1 1H4a1 1 0 01-1-1V10.5z"/><path d="M9 22V13h6v9"/></svg>
+      Home
+    </button>
+    <button class="nb" id="nb-st4" onclick="nav('stats')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="5" height="9" rx="1.5"/><rect x="9.5" y="7" width="5" height="14" rx="1.5"/><rect x="16" y="3" width="5" height="18" rx="1.5"/></svg>
+      Stats
+    </button>
+    <button class="nb on" id="nb-pl4" onclick="nav('plan')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10h7M8.5 14h7M8.5 18h4"/></svg>
+      Plan
+    </button>
+    <button class="nb" id="nb-se4" onclick="nav('settings')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/><circle cx="7" cy="6" r="2.5" fill="currentColor"/><circle cx="16" cy="12" r="2.5" fill="currentColor"/><circle cx="11" cy="18" r="2.5" fill="currentColor"/></svg>
+      Manage
+    </button>
+  </div>
+</div>
+
+<div id="plan-settings-lb" class="lb-overlay" onclick="closePlanLB(event,'plan-settings-lb')">
+  <div class="lb-panel">
+    <div class="lb-hdr"><div class="lb-ttl">Edit framework</div><button class="lb-close" onclick="closePlanLB(null,'plan-settings-lb')">✕</button></div>
+    <div class="lb-body" id="plan-settings-body"></div>
   </div>
 </div>
 
@@ -496,6 +591,10 @@ function initDb() {
   if (!db.installedDate)             db.installedDate = today();
   if (!db.lighterSlots)              db.lighterSlots = [null, null];
   if (!db.lighterDates)              db.lighterDates = [];
+  if (!db.program)            db.program = { startDate: today(), weeks: 8, framework: defaultFramework() };
+  if (!db.program.framework)  db.program.framework = defaultFramework();
+  if (!db.program.startDate)  db.program.startDate = today();
+  if (!db.program.weeks)      db.program.weeks = 8;
   save();
 }
 
@@ -559,9 +658,9 @@ let dayReturnTo = 'home';
 function nav(pg, param) {
   document.querySelectorAll('.pg').forEach(p => p.classList.remove('on'));
   document.getElementById('pg-' + pg).classList.add('on');
-  ['h','st','se'].forEach((id, i) => {
-    const pages = ['home','stats','settings'];
-    ['','2','3'].forEach(s => {
+  ['h','st','se','pl'].forEach((id, i) => {
+    const pages = ['home','stats','settings','plan'];
+    ['','2','3','4'].forEach(s => {
       const el = document.getElementById('nb-' + id + s);
       if (el) el.classList.toggle('on', pages[i] === pg);
     });
@@ -571,6 +670,7 @@ function nav(pg, param) {
   else if (pg === 'day')      renderDayView(param);
   else if (pg === 'stats')    renderStats();
   else if (pg === 'settings') renderSettings();
+  else if (pg === 'plan')     renderPlan();
 }
 
 // ── Wheel ──────────────────────────────────────────────────────
@@ -1379,7 +1479,7 @@ checkAndNotify();
 
 const mf = { name:'Grease the Groove', short_name:'GTG', display:'standalone',
   background_color:'#eef0f4', theme_color:'#eef0f4', start_url:'.',
-  icons:[{ src:`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='72' x='50' text-anchor='middle' font-size='58'>💪</text></svg>`, sizes:'512x512', type:'image/svg+xml' }] };
+  icons:[{ src:'icon-192.png', sizes:'192x192', type:'image/png' },{ src:'icon-512.png', sizes:'512x512', type:'image/png' }] };
 const lk = document.createElement('link'); lk.rel = 'manifest';
 lk.href = URL.createObjectURL(new Blob([JSON.stringify(mf)], { type:'application/json' }));
 document.head.appendChild(lk);
@@ -1387,6 +1487,50 @@ document.head.appendChild(lk);
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(()=>{});
 }
+// ── 8-Week Framework tab (read-only reference) ─────────────────
+function defaultFramework(){ return [
+  "18:6 intermittent fasting — eating window roughly 2pm–8pm",
+  "Water through the day",
+  "2pm break-fast: pea protein + creatine shake, then mixed beans with a salad",
+  "4pm: fruit salad, a little seaweed, pumpkin seeds",
+  "6pm: hot vegetable stock or tea with celery / cucumber sticks",
+  "7:30pm: balanced family dinner — add a little protein if it's light",
+  "Saturday: break fast ~11am (fruit + quinoa) before the 1pm match; creatine + protein after"
+]; }
+function planProgDay(){
+  const t = (db.program.weeks||8)*7;
+  const d = Math.round((new Date(today()) - new Date(db.program.startDate))/86400000) + 1;
+  return { day: Math.min(Math.max(d,1), t), total: t };
+}
+function renderPlan(){
+  const p = db.program; const pd = planProgDay();
+  const lines = (p.framework||[]).map(l => `<div class="fw"><div class="dot"></div><div class="tx">${escP(l)}</div></div>`).join('');
+  document.getElementById('plan-body').innerHTML = `
+    <div class="dc">
+      <div class="dc-top"><div class="dc-day"><b>${pd.day}</b> / ${pd.total}</div><div class="dc-rem">${Math.max(pd.total-pd.day,0)} days to go</div></div>
+      <div class="dc-bar"><i style="width:${(pd.day/pd.total*100).toFixed(1)}%"></i></div>
+    </div>
+    <div class="ck-hd"><div class="t">Daily framework</div></div>
+    ${lines || '<div class="plan-note">No framework saved yet — tap the gear to add your notes.</div>'}
+    <div class="plan-note">A reference for memory, not a scorecard. The thing you actually track is showing up to train — that's Home.</div>`;
+}
+function openPlanSettings(){ renderPlanSettingsBody(); document.getElementById('plan-settings-lb').classList.add('open'); }
+function renderPlanSettingsBody(){
+  const p = db.program;
+  const items = (p.framework||[]).map((l,i) => `<div class="lb-row"><div class="x">${escP(l)}</div><button onclick="delFwLine(${i})">remove</button></div>`).join('');
+  document.getElementById('plan-settings-body').innerHTML = `
+    <div class="lb-field"><label>Program start date</label><input type="date" value="${p.startDate}" onchange="setProgramStart(this.value)"></div>
+    <div class="lb-field"><label>Length (weeks)</label><input type="number" inputmode="numeric" value="${p.weeks}" onchange="setProgramWeeks(this.value)"></div>
+    <div class="lb-field"><label>Framework lines</label>${items}
+      <div style="display:flex;gap:8px;margin-top:6px"><input id="fw-new" placeholder="Add a line…" style="flex:1;background:var(--surf2);border:1px solid var(--bdr);border-radius:var(--rsm);padding:11px 12px;font-size:15px;color:var(--txt)"><button class="lb-btn" style="width:auto;padding:11px 16px;margin:0" onclick="addFwLine()">Add</button></div>
+    </div>`;
+}
+function setProgramStart(v){ if(v){ db.program.startDate = v; save(); renderPlan(); } }
+function setProgramWeeks(v){ db.program.weeks = Math.max(1, parseInt(v)||8); save(); renderPlan(); }
+function addFwLine(){ const el = document.getElementById('fw-new'); const v = el.value.trim(); if(!v) return; db.program.framework.push(v); save(); renderPlanSettingsBody(); renderPlan(); }
+function delFwLine(i){ db.program.framework.splice(i,1); save(); renderPlanSettingsBody(); renderPlan(); }
+function closePlanLB(e,id){ if(!e || e.target === document.getElementById(id)) document.getElementById(id).classList.remove('open'); }
+function escP(s){ return String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
-const CACHE = 'gtg-v1';
+const CACHE = 'gtg-v3';
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', './index.html'])));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', './index.html', './apple-touch-icon.png', './icon-192.png', './icon-512.png'])));
   self.skipWaiting();
 });
 
